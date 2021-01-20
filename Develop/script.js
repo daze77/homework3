@@ -1,3 +1,38 @@
+
+
+var numbers = [0,1,2,3,4,5,6,7,8,9]
+var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var specialchar = ["!","@","#","$","%","&","*","(",")"]
+
+
+
+myName = "Bill"
+
+console.log(letters)
+
+numbers
+letters
+specialchar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -11,4 +46,66 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);{
+  var upperCase = prompt("Upper Case Letters?", "");
+}
+
+
+
+
+
+
+
+// GIVEN I need a new, secure password
+// WHEN I click the button to generate a password
+// THEN I am presented with a series of prompts for password criteria
+// WHEN prompted for password criteria
+// THEN I select which criteria to include in the password
+// WHEN prompted for the length of the password
+// THEN I choose a length of at least 8 characters and no more than 128 characters
+// WHEN prompted for character types to include in the password
+// THEN I choose lowercase, uppercase, numeric, and/or special characters
+// WHEN I answer each prompt
+// THEN my input should be validated and at least one character type should be selected
+// WHEN all prompts are answered
+// THEN a password is generated that matches the selected criteria
+// WHEN the password is generated
+// THEN the password is either displayed in an alert or written to the page
+
+
+
+
+//need a list of number
+//need a list of lower case letters
+//need a list of upper case letters
+//need a list of special characters
+
+
+//need to ask user - prompt - lenth of password (8 - 128 characters)
+  //need to validate to ensure number provided is >8 < 128
+//need to aks user - prompt - if they want Upper case letters
+  //if yes add upper case letters to new string
+//need to ask user - prompt - if they want special characters
+  //if yes add upper case letters to new string
+
+
+//create new string with all the variables required - need to figure out how to get minimum number of letters from each of the variables and then pass to new to create a new variable that matches the lenght provided above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
