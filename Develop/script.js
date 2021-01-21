@@ -15,11 +15,27 @@ letters
 specialchar
 
 
+console.log(Math.random(numbers))
 
 
 
 
 
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+console.log(getRndInteger(numbers))
+
+
+
+
+
+//Prompts to be added somewhere
+
+
+var upperCase = prompt("Upper Case Letters?", "");
+var specialChar
 
 
 
@@ -46,9 +62,8 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);{
-  var upperCase = prompt("Upper Case Letters?", "");
-}
+generateBtn.addEventListener("click", writePassword);
+
 
 
 
@@ -102,10 +117,14 @@ generateBtn.addEventListener("click", writePassword);{
 
 
 
+//This is the code to generate radom number at least two maybe more and have the numbers then sepearated to individual integers
+var numbers = (
+  Math.floor(Math.random() * 1000 +10).toString().split("")
+)
 
+//This will determine the split string for letters and characters
 
-
-
-
-
+var lower = ("abcdefghijklmnopqrstuvwxyz".split(""))
+var upper = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""))
+var special = ("!@#$%^&*()+=?").split("")
 
