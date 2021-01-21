@@ -145,16 +145,25 @@ var you = {
      }
 
 
-    if(you.upper){
-       var z = z.concat(b)
-    } 
-    else if(you.specialcharacter){
-        var z=z.concat(c)
-    }
-    else if (you.numberin){
-        var z=z.concat(d)
-    }
-    else { var z=z}
+     if(you.upper===true && you.specialcharacter===false && you.numberin ===false){
+      var z = z.concat(b)
+   } 
+   else if(you.upper===true && you.specialcharacter===true && you.numberin === false){
+       var z=z.concat(b, c)
+   }
+   else if (you.upper===true && you.specialcharacter===true && you.numberin === true){
+       var z=z.concat(b,c,d)
+   }
+   else if(you.upper===true && you.specialcharacter===false && you.numberin === true){
+       var z=z.concat(b, d)
+   }
+   else if (you.upper===false && you.specialcharacter===true && you.numberin === false){
+       var z=z.concat(c)
+   }
+   else if (you.upper===false && you.specialcharacter===false && you.numberin === true){
+       var z=z.concat(d)
+   }
+   else { var z=z}
 
  
 
