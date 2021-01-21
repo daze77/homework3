@@ -128,3 +128,48 @@ var lower = ("abcdefghijklmnopqrstuvwxyz".split(""))
 var upper = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""))
 var special = ("!@#$%^&*()+=?").split("")
 
+
+
+
+var a = ("abcdefghijklmnopqrstuvwxyz")
+var b = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+var c = ("!@#$%^&*()")
+var d = (1234567890)
+var z = a
+
+var you = {
+    codeLength: 0,
+    upper: true,
+    specialcharacter: true,
+    numberin: true,
+     }
+
+
+    if(you.upper){
+       var z = z.concat(b)
+    } 
+    else if(you.specialcharacter){
+        var z=z.concat(c)
+    }
+    else if (you.numberin){
+        var z=z.concat(d)
+    }
+    else { var z=z}
+
+ 
+
+
+console.log(a)
+console.log(b)
+console.log(c)
+console.log(d)
+console.log(z)
+
+
+
+var emptyString = "";
+
+while (emptyString.length < you.codeLength){
+    emptyString += z[Math.floor(Math.random() * z.length) ];
+    console.log(emptyString)
+}
