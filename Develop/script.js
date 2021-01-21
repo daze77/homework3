@@ -176,9 +176,22 @@ console.log(z)
 
 
 
+// Determine the password up to the codelenght specified
 var emptyString = "";
 
 while (emptyString.length < you.codeLength){
     emptyString += z[Math.floor(Math.random() * z.length) ];
     console.log(emptyString)
 }
+
+console.log(emptyString)
+
+function findpassWord(str){
+    var strSplit = emptyString.split(" ")
+    
+}
+
+
+//need to validate for all criteria - if met stop if not met try again
+
+
