@@ -1,110 +1,108 @@
-//Created a number of variables that I will use to generate the password
-var lower = ("abcdefghijklmnopqrstuvwxyz")
-var upper = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-var specialChar = ("!@#$%^&*()")
-var numbs = (1234567890)
-var passwrd = lower //This is set to lower here because at min the user must have lower case letters
-var passWordMin = 8
-var passwordMax = 128
-var passwordCases = ""
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-
-//Created an object to house the password detaisl that I may need later
-var you = {
-    codeLength: 8,
-    upper: true,
-    specialcharacter: true,
-    numberin: true,
-   }
-
-// This code is to determine what string to use to create the password based on the boolean results of what the person entered on screen
-    if(you.upper===true && you.specialcharacter===false && you.numberin ===false){
-       var passwrd = passwrd.concat(upper)
-       var passwordCases = "Lower and Upper"
-    } 
-    else if(you.upper===true && you.specialcharacter===true && you.numberin === false){
-        var passwrd=passwrd.concat(upper, specialChar)
-        var passwordCases = "Lower, Upper and Special"
-    }
-    else if (you.upper===true && you.specialcharacter===true && you.numberin === true){
-        var passwrd=passwrd.concat(upper,specialChar,numbs)
-        var passwordCases = "Lower,Upper, Special and Numbers"
-    }
-    else if(you.upper===true && you.specialcharacter===false && you.numberin === true){
-        var passwrd=passwrd.concat(upper, numbs)
-        var passwordCases = "Lower, Upper and Numbers"
-    }
-    else if (you.upper===false && you.specialcharacter===true && you.numberin === false){
-        var passwrd=passwrd.concat(specialChar)
-        var passwordCases = "Lower and Special"
-    }
-    else if (you.upper===false && you.specialcharacter===false && you.numberin === true){
-        var passwrd=passwrd.concat(numbs)
-        var passwordCases = "Lower and Numbers"
-    }
-    else { var passwrd=passwrd
-            var passwordCases = "Lower"
-    }
-
-
-
-    console.log(passwordCases)
-
-//This is test for to see if the code above works in producing the correct string based on the details
-console.log(lower)
-console.log(upper)
-console.log(specialChar)
-console.log(numbs)
-console.log(passwrd)
-
-// Determine the password up to the requested passwird length
-var passwordGenerated = "";
-
-while (passwordGenerated.length < you.codeLength){
-    passwordGenerated += passwrd[Math.floor(Math.random() * passwrd.length) ];
-    console.log(passwordGenerated)
+  passwordText.value = password;
 }
 
-//validating the output of the code generated
-console.log(passwordGenerated)
 
-var passlenght = passwordGenerated.length
-console.log(passlenght)
+//generate password function
 
-function validatePassword() {
-    var requiredChar = new RegExp("(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])");
-    if(passwordGenerated.length >= passlenght){
-        console.log(passwordGenerated.length>=you.codeLength)
-        console.log(you.codeLength)
+
+
+//check user inputs for characters
+
+
+function generatePassword {
+  // character sets
+  var lowerChar = "abcdefghijklmnopqrstuvwxyz"
+  var upperChar = lowerChar.toUpperCase()
+  var numbchar = "012345679"
+  var specialChar = "!@#$%^&*()_+"
+
+
+  var passwordLength = prompt ("Please select the length of your password between 8-128 characters","enter password length between 8 and 128 characters");
+
+  if( 7 > passwordLength < 129 ){
+    
     }
-    if (requiredChar.test(passwordGenerated)){
-        console.log(requiredChar.test(passwordGenerated)) 
+    else {
+      alert("Your password is invalid, please try again and ensure you select a Password no less than 8 and no greater than 128 characters")
+      generatePassword();
     }
+  
+  var upperCharuse = confirm("Do you want to use UPPER CASE characters in your password?")
+  var specialCharuse = confirm("Do you want to use Special '!@#$%^&*()' characters in your password?")
+  var numbuse = confirm("Do you want to use Numbers in your password?")
+  
+  
+  console.log(passwordLength)
+  console.log(upperCharuse)
+  console.log(specialCharuse)
+  console.log(numbuse)
+
+
+
+
+
+
+
+
+
+
 }
 
-//Test to see if the code validation portionis working
-validatePassword()
-
-var patt = new RegExp("(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])");
-var res = patt.test(passwordGenerated)
-console.log(res)
-console.log(passwordGenerated)
-
-
-
-//I need a loop to generate passwords until a password is generated that meets all requirement
-//I also need to update the validator to validate based on teh characters selected 
 
 
 
 
-//THis is test code here
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
- 
+//////////////////////////////////////////////////////////////////
+/*
+//Fill's notes
+// character sets
+var charsLower = "abcdefghijklmnopqrstuvwxyz"
+var charsUpper = charsLower.toUpperCase()
+var charsNumbers = "012345679"
+var charsSpecial = "!@#$%^&*()_+"
+// TODO from user prompt
+var userLength = 10
+// TODO userLower/userUpper/userNums/userSpecial from confirm boxes.
+var userLower = userUpper = userNums = userSpecial = true
+// build the random picker string based on user prompts
+var charSet =( userLower ? charsLower : '' )
+            +( userUpper ? charsUpper : '' )
+            +( userNums  ? charsNumbers : '' )
+            +( userSpecial ? charsSpecial : '' )
+// generate the string
+var password = ""
+for( var i=0; i<userLength; i++ ){
+    var charPick = Math.floor(Math.random()*charSet.length)
+    password += charSet[charPick]
+}
+// now plug this into the DOM
+document.querySelector(".answer").value = password
+//Fills nots
+*/
+
+
+
+//character sets
 
 
 
 
 
 
+
+//request user inputs and set variables
+
+
+
+document.querySelector('#generate').addEventListener('click', xxx)
