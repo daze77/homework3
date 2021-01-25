@@ -1,23 +1,3 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
-
-//generate the variables to be used within the password generator
-var a = ("abcdefghijklmnopqrstuvwxyz")
-var b = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-var c = ("!@#$%^&*()")
-var d = (1234567890)
-var baseCharSet = a
-
-
-//////////Testing variables are showing up properly
-console.log(a)
-console.log(b)
-console.log(c)
-console.log(d)
-console.log(baseCharSet)
-
-
 // Trigger password generation
 function writePassword() {
     var password = generatePassword();
@@ -26,10 +6,6 @@ function writePassword() {
 
 //generate user prompts for inputs to questions
 var passwordLength = parseInt(prompt("Please select the length of your password", "Password from 8 - 128 characters!"))
-
-if(passwordLength < 8 || passwordLength > 128){
-    var passwordLength = parseInt(prompt("Sorry your password doesn't meet the requireemnts", "Please select a passowrd from 8 to 128 characters"))
-}
 var upperLetters = confirm("password to include uppers?")
 var specialLetters = confirm("password to include special characters?")
 var numberstoo = confirm("password to include numbers?")
@@ -108,6 +84,3 @@ function generatePassword(){
          document.querySelector('#password').value = password
          
 }
-
-//listen for generate password button click - when clicked run 
-generateBtn.addEventListener("click", writePassword());
