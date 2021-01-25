@@ -18,24 +18,18 @@ console.log(d)
 console.log(baseCharSet)
 
 
-// Write password to the #password input
+// Trigger password generation
 function writePassword() {
     var password = generatePassword();
 }
  
 
 //generate user prompts for inputs to questions
-    var passwordLength = parseInt(prompt("Please select the length of your password", "Password from 8 - 128 characters!"))
-    // if(passwordLength < 8 || passwordLength > 128){
-    //     var passwordLength = parseInt(prompt("Please try again, password length must be no less than 7 characters and no greater than 128 characters", "Pleas try again"))
-    // }
-
-
-
-    var upperLetters = confirm("password to include uppers?")
-    var specialLetters = confirm("password to include special characters?")
-    var numberstoo = confirm("password to include numbers?")
-    var lowerLetters = true
+var passwordLength = parseInt(prompt("Please select the length of your password", "Password from 8 - 128 characters!"))
+var upperLetters = confirm("password to include uppers?")
+var specialLetters = confirm("password to include special characters?")
+var numberstoo = confirm("password to include numbers?")
+var lowerLetters = true
 
 console.log(baseCharSet)
 console.log(newbaseCharSet)
@@ -88,6 +82,7 @@ console.log(newbaseCharSet)
 //generate the password based on inputs
 
 function generatePassword(){
+
     console.log(newbaseCharSet)
     console.log(passwordLength)
     console.log(newbaseCharSet.length)
@@ -101,7 +96,7 @@ function generatePassword(){
          console.log(newbaseCharSet)
          console.log(newbaseCharSet.length)
          console.log(password)
-
+        //write password to html
          document.querySelector('#password').value = password
          
 }
@@ -111,7 +106,7 @@ generateBtn.addEventListener("click", writePassword);
 console.log("Butten clicked")
 
 
-writePassword()
+
 
 
 
