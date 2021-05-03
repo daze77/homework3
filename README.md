@@ -9,8 +9,8 @@ This is a password generator application build using javaScrip to run through a 
 
 ## __Following are a couple of screenshot of the application for reference__
 
-![Main Application](/Assets/images/passwordgeneratorscreenshot.png)
-![Main Appliction Promp](/Assets/images/passwordgeneratorprompt.png)
+![Main Application](./Assets/images/passwordgeneratorscreenshot.png)
+![Main Appliction Promp](./Assets/images/passwordgeneratorprompt.png)
 
 
 

@@ -4,9 +4,6 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-
 }
 
 
@@ -14,7 +11,7 @@ function writePassword() {
     
    
    
-      console.log("Ok ready")
+    console.log("Ok ready")
     //generate the variables to be used within the password generator
     var a = ("abcdefghijklmnopqrstuvwxyz")
     var b = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
@@ -32,18 +29,45 @@ function writePassword() {
     
     
     //generate user prompts for inputs to questions
+
+
+
+
     var passwordLength = parseInt(prompt("Please select the length of your password", "Password from 8 - 128 characters!"))
-    
+    var upperLetters 
+    var specialLetters 
+    var numberstoo
+    var lowerLetters
+
     if(passwordLength < 8 || passwordLength > 128){
-        var passwordLength = parseInt(prompt("Sorry your password doesn't meet the requireemnts", "Please select a passowrd from 8 to 128 characters"))
+       tryAgain()
+    } else {
+       proceed()
     }
-    var upperLetters = confirm("password to include uppers?")
-    var specialLetters = confirm("password to include special characters?")
-    var numberstoo = confirm("password to include numbers?")
-    var lowerLetters = true
-    
+
+    function tryAgain(){
+      passwordLength = parseInt(prompt("Sorry your password doesn't meet the requireemnts", "Please select a passowrd from 8 to 128 characters"))
+      if(passwordLength < 8 || passwordLength > 128){
+        tryAgain()
+     } else {
+        proceed()
+     }
+        
+    }
+
+
+
+    function proceed(){
+      upperLetters = confirm("password to include uppers?")
+      specialLetters = confirm("password to include special characters?")
+      numberstoo = confirm("password to include numbers?")
+      lowerLetters = true
+
+
+    }
+
     console.log(baseCharSet)
-    console.log(newbaseCharSet)
+    // console.log(newbaseCharSet)
     
     
     //Console.log to verify the input is being logged  
@@ -114,9 +138,9 @@ function writePassword() {
           passwordText.value = password;
 
           
-    }
+  }
     
-    }
+}
    
    
 
